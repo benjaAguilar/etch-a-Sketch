@@ -24,6 +24,9 @@ body{
 }
 
 .canvas{
+    display: flex;
+    flex: none;
+    flex-wrap: wrap;
     width: 800px;
     height: 600px;
     background-color: white;
