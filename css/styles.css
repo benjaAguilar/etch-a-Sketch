@@ -1,0 +1,43 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    border-radius: 50px;
+    background-color: indianred;
+    box-shadow: 0px 0px 5px #333;
+}
+
+.title{
+    font-size: 50px;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-bottom: 20px;
+    color: yellow;
+}
+
+.canvas{
+    width: 800px;
+    height: 600px;
+    background-color: white;
+}
+
+.circle-box{
+    display: flex;
+    gap: 800px;
+}
+
+.circle{
+    background-color: white;
+    border-radius: 999px;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0px 0px 5px #333;
+}
