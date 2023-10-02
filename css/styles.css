@@ -21,6 +21,7 @@ a{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 1040px;
     padding: 50px;
     border-radius: 50px;
     background-color: indianred;
@@ -52,7 +53,7 @@ a{
 }
 
 .circle{
-    flex: initial;
+    flex: none;
     background-color: white;
     border-radius: 999px;
     width: 100px;
@@ -72,6 +73,7 @@ a{
     width: 800px;
     font-size: 20px;
     padding: 10px;
+    margin-top: 10px;
     border: none;
     background-color: gold;
 }
