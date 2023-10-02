@@ -77,9 +77,16 @@ a{
 }
 
 .customize:hover{
+    background-color: goldenrod;
     font-weight: bold;
     box-shadow: 0px 0px 5px #333;
     cursor: pointer;
+}
+
+.active{
+    background-color: goldenrod;
+    box-shadow: 0px 0px 5px #333;
+    font-weight: bold;
 }
 
 .panel{
