@@ -3,6 +3,14 @@ let size_x16 = 16 * 16;
 let size_x32 = 32 * 32;
 let size_x64 = 64 * 64;
 
+let btnX16 = document.querySelector('#small');
+let btnX32 = document.querySelector('#medium');
+let btnX64 = document.querySelector('#large');
+
+btnX16.addEventListener("click", () => {printGrid(size_x16)});
+btnX32.addEventListener("click", () => {printGrid(size_x32)});
+btnX64.addEventListener("click", () => {printGrid(size_x64)});
+
 printGrid(size_x16);
 
 function printGrid(gridSize){
@@ -25,7 +33,7 @@ function printGrid(gridSize){
             grid.style.backgroundColor = "#333";
     
         });
-        
+
         if(gridSize === 16 * 16){
             grid.style.width = "50px";
             grid.style.height = "37.5px";
