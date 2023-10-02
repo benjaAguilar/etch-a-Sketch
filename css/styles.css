@@ -68,7 +68,7 @@ a{
     border: 1px solid #ccc;
 }
 
-#custom-grid{
+.customize{
     width: 800px;
     font-size: 20px;
     padding: 10px;
@@ -76,7 +76,7 @@ a{
     background-color: gold;
 }
 
-#custom-grid:hover{
+.customize:hover{
     font-weight: bold;
     box-shadow: 0px 0px 5px #333;
     cursor: pointer;
