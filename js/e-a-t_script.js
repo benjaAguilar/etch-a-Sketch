@@ -1,4 +1,6 @@
 let canvas = document.querySelector('.canvas');
+let accordion = document.querySelectorAll('.customize');
+
 let size_x16 = 16 * 16;
 let size_x32 = 32 * 32;
 let size_x64 = 64 * 64;
@@ -12,6 +14,19 @@ btnX32.addEventListener("click", () => {printGrid(size_x32)});
 btnX64.addEventListener("click", () => {printGrid(size_x64)});
 
 printGrid(size_x16);
+
+accordion.forEach((btn) => {
+    btn.addEventListener("click", function(){
+        let panel = this.nextElementSibling;
+        if(panel.style.display === "block"){
+            panel.style.display = "none"
+
+        } else{
+            panel.style.display = "block";
+            
+        }
+    });
+});
 
 function printGrid(gridSize){
     document.querySelectorAll('.grid').forEach((grid) => {
