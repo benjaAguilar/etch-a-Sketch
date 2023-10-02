@@ -34,7 +34,9 @@ body{
 
 .circle-box{
     display: flex;
-    gap: 800px;
+    align-items: center;
+    justify-content: center;
+    gap: 300px;
 }
 
 .circle{
@@ -51,4 +53,10 @@ body{
     width: 50px;
     height: 37.5px;
     border: 1px solid #ccc;
+}
+
+.customize{
+    padding-top: 100px;
+    padding-left: 100px;
+    align-self: baseline;
 }
