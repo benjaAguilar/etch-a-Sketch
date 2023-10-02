@@ -25,6 +25,19 @@ function printGrid(gridSize){
             grid.style.backgroundColor = "#333";
     
         });
+        
+        if(gridSize === 16 * 16){
+            grid.style.width = "50px";
+            grid.style.height = "37.5px";
+
+        } else if(gridSize === 32 * 32){
+            grid.style.width = "25px";
+            grid.style.height = "18.75px";
+
+        } else{
+            grid.style.width = "12.5px";
+            grid.style.height = "9.5px";
+        }
     
     });
 }
