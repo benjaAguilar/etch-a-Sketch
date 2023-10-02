@@ -6,3 +6,13 @@ for(let i = 1; i <= 255; i++){
 
     canvas.appendChild(div);
 }
+
+let grids = document.querySelectorAll('.grid');
+
+grids.forEach((grid) => {
+    grid.addEventListener("mouseover", () => {
+        grid.style.backgroundColor = "#333";
+        
+    });
+
+});
