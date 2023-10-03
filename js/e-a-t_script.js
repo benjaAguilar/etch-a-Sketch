@@ -1,10 +1,12 @@
 let canvas = document.querySelector('.canvas');
 let accordion = document.querySelectorAll('.customize');
+let currentColor = "black";
 
 let size_x16 = 16 * 16;
 let size_x32 = 32 * 32;
 let size_x64 = 64 * 64;
 
+//size buttons
 let btnX16 = document.querySelector('#small');
 let btnX32 = document.querySelector('#medium');
 let btnX64 = document.querySelector('#large');
@@ -12,6 +14,17 @@ let btnX64 = document.querySelector('#large');
 btnX16.addEventListener("click", () => {printGrid(size_x16)});
 btnX32.addEventListener("click", () => {printGrid(size_x32)});
 btnX64.addEventListener("click", () => {printGrid(size_x64)});
+
+//color buttons
+let colorBlack = document.querySelector('#black');
+let colorWhite = document.querySelector('#white');
+let progressiveDark = document.querySelector('#progresive');
+let randomColor = document.querySelector('#random');
+
+colorBlack.addEventListener("click", () => {currentColor = "black"});
+colorWhite.addEventListener("click", () => {currentColor = "white"});
+progressiveDark.addEventListener("click", () => {currentColor = "pr dark"});
+randomColor.addEventListener("click", () => {currentColor = "random"});
 
 printGrid(size_x16);
 
@@ -47,7 +60,20 @@ function printGrid(gridSize){
 
     grids.forEach((grid) => {
         grid.addEventListener("mouseover", () => {
-            grid.style.backgroundColor = "#333";
+            if(currentColor === "black"){
+                grid.style.backgroundColor = "#333";
+
+            } else if(currentColor === "white"){
+                grid.style.backgroundColor = "white";
+
+            } else if(currentColor === "pr dark"){
+                grid.style.backgroundColor = "#333";
+
+            } else{
+                grid.style.backgroundColor = "rgb(" + getRandomNumber() + ", " + getRandomNumber() + ", " + getRandomNumber() + ")";
+
+            }
+            
     
         });
 
