@@ -47,9 +47,10 @@ accordion.forEach((btn) => {
 function getRandomNumber(){
     let num = Math.floor(Math.random() * 255) + 1;
 
-    return num;
+    return num; 
 }
 
+//grid Printing
 function printGrid(gridSize){
     document.querySelectorAll('.grid').forEach((grid) => {
         grid.remove();
@@ -65,7 +66,9 @@ function printGrid(gridSize){
     
     let grids = document.querySelectorAll('.grid');
 
-    grids.forEach((grid) => {
+    function colorGrid(grid){
+        let currentOpacity = 0.2;
+
         grid.addEventListener("mouseover", () => {
             if(currentColor === "black"){
                 grid.style.backgroundColor = "#333";
@@ -75,6 +78,9 @@ function printGrid(gridSize){
 
             } else if(currentColor === "pr dark"){
                 grid.style.backgroundColor = "#333";
+                grid.style.opacity = currentOpacity;
+                currentOpacity += 0.2;
+                
 
             } else{
                 grid.style.backgroundColor = "rgb(" + getRandomNumber() + ", " + getRandomNumber() + ", " + getRandomNumber() + ")";
@@ -97,6 +103,7 @@ function printGrid(gridSize){
             grid.style.height = "9.5px";
         }
     
-    });
+    }
+    grids.forEach(colorGrid);
 }
 
