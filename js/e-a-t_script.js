@@ -28,6 +28,7 @@ randomColor.addEventListener("click", () => {currentColor = "random"});
 
 printGrid(size_x16);
 
+//accordion buttons
 accordion.forEach((btn) => {
     btn.addEventListener("click", function(){
         this.classList.toggle("active");
@@ -42,6 +43,12 @@ accordion.forEach((btn) => {
         }
     });
 });
+
+function getRandomNumber(){
+    let num = Math.floor(Math.random() * 255) + 1;
+
+    return num;
+}
 
 function printGrid(gridSize){
     document.querySelectorAll('.grid').forEach((grid) => {
